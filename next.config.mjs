@@ -2,8 +2,7 @@
 const nextConfig = {
     images:{
         domains:[
-            "api.escuelajs.co",
-            "i.imgur.com"
+            "img.freepik.com"
         ]
     }
 };
