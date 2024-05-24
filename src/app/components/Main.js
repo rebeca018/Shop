@@ -16,30 +16,15 @@ export default async function Main() {
 
             <ul className={styles.carrossel}>
               <li>
-                    <Image 
-                        width={200} 
-                        height={200} 
-                        src={products.images[0]} 
-                        className={styles.img}
-                    />
+            
               </li>
 
               <li>
-                    <Image 
-                        width={200} 
-                        height={200} 
-                        src={products.images[1]} 
-                        className={styles.img}
-                    />
+            
               </li>
 
               <li>
-                    <Image 
-                        width={200} 
-                        height={200} 
-                        src={products.images[2]} 
-                        className={styles.img}
-                    />
+            
               </li>
 
             </ul>
