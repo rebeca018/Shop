@@ -1,0 +1,33 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: rgb(80, 71, 87);
+}
+
+.card{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    background-color: rgb(122, 109, 134);
+}
+
+.carrossel{ 
+    display: block;
+    height: 293px;
+    width: 395px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.carrossel li{
+    list-style: none;
+    position: absolute;
+}

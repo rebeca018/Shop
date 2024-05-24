@@ -2,7 +2,8 @@
 const nextConfig = {
     images:{
         domains:[
-            "fakestoreapi.com"
+            "api.escuelajs.co",
+            "i.imgur.com"
         ]
     }
 };
