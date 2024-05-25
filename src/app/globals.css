@@ -7,6 +7,11 @@ body{
     background-color:  #03110f;
 }
 
+hr{
+    size: 5px;
+    width: auto;
+}
+
 *::-webkit-scrollbar {
     height: 1000px;
     width: 10px;

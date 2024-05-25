@@ -9,6 +9,12 @@
     height: 30px;
 }
 
+.img{
+    margin-top: 5px;
+    height: auto;
+    width: 75px;
+}
+
 .navbar{
     display: flex;
     text-decoration:none;
@@ -62,4 +68,10 @@
 	width: 18px;
 	height: 18px;
     margin-top: 5px;
+}
+
+.linha{
+    color: #5A7EC7;
+    size: 5px;
+    width: 50px;
 }

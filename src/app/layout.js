@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       
       <body>
         <Header/>
+        <hr />
           {children}
         <Footer/>
       </body>

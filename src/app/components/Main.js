@@ -14,7 +14,7 @@ export default async function Main() {
             <p>{products.price}</p>
             <p>{products.description}</p>
             <p>{products.category.name}</p>
-
+          
             <Image
               width={110}
               height={110}
@@ -24,7 +24,6 @@ export default async function Main() {
           </div>
         </div>
       )}
-
     </main>
   );
 }
