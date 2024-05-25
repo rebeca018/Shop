@@ -9,29 +9,22 @@ export default async function Main() {
     <main className={styles.main}>
       {data.map((products)=> 
         <div className={styles.card} key={products.id}>
+          <div className={styles.card2}>
             <p>{products.title}</p>
             <p>{products.price}</p>
             <p>{products.description}</p>
             <p>{products.category.name}</p>
 
-            <ul className={styles.carrossel}>
-              <li>
-            
-              </li>
-
-              <li>
-            
-              </li>
-
-              <li>
-            
-              </li>
-
-            </ul>
-    
-
+            <Image
+              width={110}
+              height={110}
+              src={"https://upload.wikimedia.org/wikipedia/pt/f/f8/Taylor_Swift_-_Folklore.png"}
+              className={styles.img}
+            />
+          </div>
         </div>
       )}
+
     </main>
   );
 }
