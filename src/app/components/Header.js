@@ -20,26 +20,21 @@ export default function Header() {
                     <p>Fake Store API</p>
                 </div>
 
-                <div className={styles.navbar_link}>
-                    <p>Home</p>
-                </div>
-
-                <div className={styles.navbar_link}>
-                    <p>Cadastrar</p>
-                </div>
-
-                <div className={styles.navbar_link}>
-                    <p>Produtos</p>
-                </div> 
-                <div className={styles.custom_input}>
+                <div className={styles.img}>
                     <Image
-                        width={18}
-                        height={18}
-                        className={styles.icon}
-                        src={"https://img.icons8.com/office/16/search--v1.png"}
+                        width={30}
+                        height={30}
+                        src={"https://img.icons8.com/windows/32/shopping-cart.png"}
                     />
-                    <input className={styles.input} type="text" placeholder="Pesquisar"></input>
                 </div>
+
+                <div className={styles.navbar_link}>
+                    <button className={styles.botao}>Novo produto</button>
+                </div>
+
+                <div className={styles.navbar_link}>
+                    <p>frase</p>
+                </div> 
             </nav>
             
         </header>

@@ -2,8 +2,7 @@
 const nextConfig = {
     images:{
         domains:[
-            "img.freepik.com",
-            "upload.wikimedia.org",
+            "fakestoreapi.com",
             "img.icons8.com"
         ]
     }
