@@ -1,12 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .cabecalho{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 16px;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     text-decoration:none;
     background-color: #6c7da7;
-    height: 30px;
+    height: auto;
 }
 
 
@@ -17,12 +19,12 @@
 
 .navbar_link{
     display: flex;
-    padding-right: 20px;
+    padding-right: 15px;
     text-align: center
 }
 
 .img{
-    margin-top: 8px;
+    margin-top: 10px;
     height: auto;
     width: 75px;
 }

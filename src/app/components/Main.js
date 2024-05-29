@@ -9,18 +9,18 @@ export default async function Main() {
     <main className={styles.main}>
       {data.map((products)=> 
           <div className={styles.card}>
-            <p>{products.title}</p>
-            <p>{products.price}</p>
-            <p>{products.description}</p>
-            <p>{products.category}</p>
-            <p>{products.rating.count}</p>
-          
             <Image
-              width={110}
-              height={110}
+              width={220}
+              height={220}
               src={products.image}
               className={styles.img}
             />
+
+            <p>{products.title}</p>
+            <p>{products.price}</p>
+            <p>{products.description.slice(0, 110)}</p>
+            <p>{products.category}</p>
+            <p>{products.rating.count}</p>
           </div>
       )}
     </main>
