@@ -11,7 +11,9 @@
 }
 .redes{
     display: flex;
-
+}
+.redes li {
+    list-style: none;
 }
 
 .logo{
