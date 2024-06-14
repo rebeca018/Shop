@@ -40,6 +40,13 @@
     border-radius: 5px;
 }
 
+.botao{
+    border-radius: 8px;
+    background-color: #6c7da7;
+    border-color: #6c7da7;
+    margin-top: 10px;
+    margin-right: 10px;
+}
 /*
 real time colors
 

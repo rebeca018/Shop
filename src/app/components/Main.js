@@ -1,7 +1,9 @@
 'use client'
+import { useEffect, useState } from "react";
+import Spinner from "./Spinner";
 import Image from "next/image";
 import styles from "./main.module.css";
-import { useEffect, useState } from "react";
+
 
 export default function Main() {
 
@@ -47,13 +49,17 @@ export default function Main() {
       setListProduct(newList);
     }
 
+    if(listProduct[0] == null){
+      return <Spinner/>
+    }
+
   return (
     <>
     <div>
-      <button onClick={orderAz}>A-Z</button>
-      <button onClick={orderZa}>Z-A</button>
-      <button onClick={precoMa}>Preço: maior - menor</button>
-      <button onClick={precoMe}>Preço: menor - maior</button>
+      <button onClick={orderAz} className={styles.botao}>A-Z</button>
+      <button onClick={orderZa} className={styles.botao}>Z-A</button>
+      <button onClick={precoMa} className={styles.botao}>Preço: maior - menor</button>
+      <button onClick={precoMe} className={styles.botao}>Preço: menor - maior</button>
     </div>
     <main className={styles.main}>
       {listProduct.map((products)=> 
