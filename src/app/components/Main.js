@@ -8,6 +8,8 @@ import styles from "./main.module.css";
 export default function Main() {
 
     const [listProduct, setListProduct] = useState([]);
+    const [listComplete, setListComplete] = useState([]);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
       const getProduct = async () => {
@@ -15,6 +17,7 @@ export default function Main() {
         const data = await response.json();
 
         setListProduct(data);
+        setListComplete(data);
       }
         getProduct();
     }, [] ); 
@@ -49,6 +52,17 @@ export default function Main() {
       setListProduct(newList);
     }
 
+    const searchText = (text) => {
+      setSearch(text);
+      if(text.trim() === ""){
+        setListProduct(listComplete);
+        return
+      }
+      const newList = listProduct.filter((product) => product.title.toUpperCase().trim().includes(text.search.toUpperCase().trim()))
+      setListProduct(newList);
+
+    }
+
     if(listProduct[0] == null){
       return <Spinner/>
     }
@@ -56,6 +70,7 @@ export default function Main() {
   return (
     <>
     <div>
+      <input type="text" value={search} placeholder="Pesquise o produto" onChange={(event) => searchText(event.target.value)}/>
       <button onClick={orderAz} className={styles.botao}>A-Z</button>
       <button onClick={orderZa} className={styles.botao}>Z-A</button>
       <button onClick={precoMa} className={styles.botao}>Preço: maior - menor</button>
