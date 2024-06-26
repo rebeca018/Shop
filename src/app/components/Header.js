@@ -33,7 +33,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.navbar_link}>
-                    <p>A melhor loja para as suas</p>
+                    <p>A melhor loja para as suas compras</p>
                 </div> 
             </nav>
             

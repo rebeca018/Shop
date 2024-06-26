@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import Image from "next/image";
 import styles from "./main.module.css";
+import ErrorGetData from "./ErrorGetData";
 
 
 export default function Main() {
@@ -10,14 +11,19 @@ export default function Main() {
     const [listProduct, setListProduct] = useState([]);
     const [listComplete, setListComplete] = useState([]);
     const [search, setSearch] = useState("");
+    const [errorFetch, setErrorFetch] = useState(false);
 
     useEffect(() => {
       const getProduct = async () => {
-        const response = await fetch("https://fakestoreapi.com/products");
-        const data = await response.json();
+        try{
+          const response = await fetch("https://fakestoreapi.com/products");
+          const data = await response.json();
 
-        setListProduct(data);
-        setListComplete(data);
+          setListProduct(data);
+          setListComplete(data);
+        }catch{
+          setErrorFetch(true);
+        }
       }
         getProduct();
     }, [] ); 
@@ -58,13 +64,21 @@ export default function Main() {
         setListProduct(listComplete);
         return
       }
-      const newList = listProduct.filter((product) => product.title.toUpperCase().trim().includes(text.search.toUpperCase().trim()))
+      const newList = listProduct.filter((product) => product.title.toUpperCase().trim().includes(search.toUpperCase().trim()))
       setListProduct(newList);
 
     }
 
-    if(listProduct[0] == null){
-      return <Spinner/>
+    if(errorFetch == true){
+      return <ErrorGetData/>
+    }
+
+    if(listComplete[0] == null){
+      return (
+        <main className={styles.spinner}>
+          <Spinner/>
+        </main>
+      ) 
     }
 
   return (
