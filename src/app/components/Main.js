@@ -4,6 +4,7 @@ import Spinner from "./Spinner";
 import Image from "next/image";
 import styles from "./main.module.css";
 import ErrorGetData from "./ErrorGetData";
+import Link from "next/link";
 
 
 export default function Main() {
@@ -105,6 +106,11 @@ export default function Main() {
             <p>{products.description.slice(0, 110)}</p>
             <p>{products.category}</p>
             <p>{products.rating.count}</p>
+
+            <Link href={`/product/${products.id}`}>
+              Ver produto
+            </Link>
+            
           </div>
       )}
     </main>
