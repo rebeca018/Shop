@@ -1,4 +1,3 @@
-
 import Main from "./components/Main";
 import styles from "./page.module.css"
 
